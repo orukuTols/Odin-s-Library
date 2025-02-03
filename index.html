@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odins Library</title>
+  <link rel="stylesheet" href="lib.css">
+  <script src="lib.js"></script>
+</head>
+<body>
+  
+  <div id="Lib">
+<h1>Odin's Library</h1>
+<div class="marcus">
+<p> <strong>Marcus Tullius Cicero</strong> <br>
+  <br>
+  "A room without books is like a body without a soul." 
+  </p>
+</div>
+  </div><!--Libs ending-->
+
+  <div id="Container">
+    <div class="add">
+<form action="" id="Form"  >
+  <label for="title">Title:</label><br>
+  <input type="text" id="title" name="Title:" minlength="1" required>
+<br>
+<br>
+
+<label for="author">Author:</label><br>
+<input type="text" id="author" name="Author:" minlength="1" required>
+<br>
+<br>
+
+<label for="pages">No of pages:</label><br>
+<input type="number" id="pages" name="No of pages:"   required>
+<br>
+<br>
+
+
+<label for="genre"> Genre:</label>
+<br>
+
+<select id="genre" name="Genre:" required>
+  <option value="Fantasy">Fantasy</option>
+  <option value="Horror">Horror</option>
+  <option value="Comedy">Comedy</option>
+  <option value="Religion">Religion</option>
+</select>
+<br>
+<br>
+
+
+  <button onclick="Library()" type="submit" id="submit" >Submit</button>
+</form>
+   </div><!--add ending-->
+  
+   <div class="New">   
+    
+  </div>
+  </div><!--Container ending-->
+
+</body>
+
+</html>

@@ -23,7 +23,11 @@ function  addBookToLibrary(){
   let pag = Pages.value;
   let gen = Genre.value;
 
+<<<<<<< HEAD
   if((tit && aut && pag) !== ''){
+=======
+  if((tit.length >  0) && (aut.length > 0) && (pag > 0)){
+>>>>>>> a8f6936a732ac99c3f259d69de6ebf55722923ea
     event.preventDefault();
 let Pushed = new Books(tit, aut, pag, gen);
 myLibrary.push(Pushed)

@@ -23,7 +23,7 @@ function  addBookToLibrary(){
   let pag = Pages.value;
   let gen = Genre.value;
 
-  if((tit.length >  3) && (aut.length > 3) && (pag > 2)){
+  if((tit && aut && pag) !== ''){
     event.preventDefault();
 let Pushed = new Books(tit, aut, pag, gen);
 myLibrary.push(Pushed)
@@ -42,12 +42,6 @@ finalB.style.backgroundColor = "crimson";
 finalB.style.color = "white"
 finalB.style.borderRadius = "50%";
 
-finalB.addEventListener("click",Clicked);
-function Clicked() {
-  newDiv.remove();
-}
-
-
 document.getElementById("Form").reset()
 nameT.textContent = `Title: ${tit}`;
 nameA.textContent = `Author: ${aut}`;
@@ -60,11 +54,21 @@ newDiv.appendChild(nameG);
 newDiv.appendChild(finalB);
 New.appendChild(newDiv);
 
-  } else {
+finalB.addEventListener("click",Clicked);
+
+function Clicked() {
+  let confirm = prompt("To confirm delete type Yes");
+   let lower = confirm.toLowerCase();
+  if(lower === "yes"){
+    newDiv.remove();
+} 
+}
+}
+  else {
     alert("Complete the form")
     event.preventDefault();
   }
-  
+
 
   
 }
